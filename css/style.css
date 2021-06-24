@@ -18,7 +18,7 @@ html {
 }
 
 body {
-    background-color: gray;
+    background-color: rgb(236, 179, 179);
   /* Use a system font, if none are available use an available sans-sarif   font */
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
@@ -30,7 +30,7 @@ body {
 }
 
 main {
-    width: 200px;
+    width: 300px;
     background-color: white;
     font-size: 2rem;
     text-align: center;
@@ -41,7 +41,7 @@ main {
     font-size: 1.2rem;
     font-weight: bold;
     color: darkgreen;
-    padding: 
+    padding: 10px 20px 0 0;
 }
 
 #img {
@@ -54,18 +54,13 @@ h1, p {
 }
 
 h1 {
-    font-size: 24px;
-    text-align: center;
+    font-size: 3.4rem;
     padding: 8px 0;
 }
 
 #occupation {
     background-color: lightgrey;
     padding: 16px 0;
-}
-
-#rating {
-    background-color: lightgrey;
 }
 
 #brand {
@@ -81,29 +76,69 @@ h1 {
 }
 
 #contact > p {
-    height: ;
-    width: ;
+    height: 60px;
+    width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 #contact > p:first-child {
-    background-color: seagreen;
+    background-color: lightgreen;
 }
 
 #contact > p:last-child {
-    background-color: seagreen;
+    background-color: rgb(135, 203, 165);
 }
 
 @media only screen and (min-width: 600px){
     main {
         display: grid;
-        grid-template-columns: 1fr 2fr;
+        text-align: left;
+        width: 550px;
+        grid-template-columns: 40% 60%;
         grid-template-rows: auto auto auto auto;
         grid-template-areas: 
         "status name"
         "img occupation"
         "img brand"
         "contact offer";
-}
+    }
+
+    #status {
+        text-align: left;
+        padding: 10px 0 0 20px;
+    }
+
+    #name {
+        text-align: left;
+        padding: 10px 0 0 20px
+    }
+
+    img {
+        grid-area: img;
+        margin: 0 auto;
+    }
+
+    #brand {
+        display: inline;
+    }
+    
+    #contact {
+        grid-area: contact;
+    }
+
+    #brand > p {
+        border-left: green 4px solid;
+        padding: 0 20px 0 8px;
+        font-size: 1.6rem;
+    }
+
+    #offer {
+        font-size: 1.4rem
+    }
+
+    #name, #occupation, #brand, #offer {
+        padding-left: 20px;
+        background-color: lightgray;
+    }
