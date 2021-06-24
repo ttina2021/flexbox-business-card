@@ -24,8 +24,10 @@ body {
     Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
     margin: 0;
     display: flex;
+    flex-wrap: center;
     justify-content: center;
     align-items: center;
+    align-content: space-between;
     min-height: 100vh;
 }
 
@@ -76,7 +78,7 @@ h1 {
 }
 
 #contact > p {
-    height: 60px;
+    height: 65px;
     width: 50%;
     display: flex;
     align-items: center;
